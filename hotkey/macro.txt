@@ -1,2 +1,7 @@
 F1
     execute, chrome.exe;
+
+F2
+    execute, chrome.exe;
+    wait, 1000;
+    execute, chrome.exe;

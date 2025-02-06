@@ -1,12 +1,11 @@
 #include "resources.h"
 #include "hotkey.cpp"
 #include "parser.cpp"
-#include "actions.cpp"
 
 
 int main()
 {
-    macro mymacro = parse("macro.txt");
-    if (!hotkeycheck(mymacro)) exe(mymacro);
+    std::vector<macro> macros = parse("macro.txt");
+    if (hotkeycheck(macros)) return 1;
     return 0;
 }

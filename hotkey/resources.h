@@ -10,7 +10,8 @@
 #include <Windows.h>
 
 const std::map<std::string, UINT> M_hotkeys = {
-	{"F1", VK_F1}
+	{"F1", VK_F1},
+	{"F2", VK_F2}
 };
 
 
@@ -26,5 +27,7 @@ struct macro
 	UINT hotkey;
 	std::vector<action> actions;
 };
+
+
 
 #endif
