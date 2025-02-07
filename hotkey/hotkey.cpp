@@ -6,7 +6,7 @@ int hotkeycheck(std::vector<macro> macros)
 {
     for(int i = 0; i < macros.size(); i++)
     {
-        if (!RegisterHotKey(NULL, i+1, 0, macros[i].hotkey)) {
+        if (!RegisterHotKey(NULL, i+1, (macros[i].modifiers.empty()) ? 0 : macros[i].modifiers[0], macros[i].hotkey)) {
             std::cerr << "Failed to register hotkey!" << std::endl;
             return 1;
         }
