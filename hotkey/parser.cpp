@@ -18,7 +18,10 @@ std::vector<macro> parse(const std::string filepath)
         {
             if(line.find('/') != std::string::npos) {
                 for(int i = 0; i < line.find('/'); i++) {
-                    modifiers.push_back(M_hotkeys.at(line.substr(i, 1)));
+                    if(M_hotkeys.find(line.substr(i, 1)) != M_hotkeys.end())
+                    {
+                        modifiers.push_back(M_hotkeys.at(line.substr(i, 1)));
+                    }
                 }
                 line = line.substr(line.find('/')+1);
             }
