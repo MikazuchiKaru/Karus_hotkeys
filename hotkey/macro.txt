@@ -1,11 +1,8 @@
-F1
-    msgbox, hello world, greeting;
+^+/C
+    execute, chrome.exe;
 
-F2
-    click, left;
-
-F3
-    send, hello, world;
+^/NUM1
+    execute, https://www.crunchyroll.com/;
 
 ^!/ESC
     exit, 0;

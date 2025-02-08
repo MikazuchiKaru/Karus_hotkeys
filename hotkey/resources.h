@@ -75,7 +75,6 @@ const std::map<std::string, UINT> M_hotkeys =
     {"=", '='},
     {"[", '['},
     {"]", ']'},
-    {";", ';'},
     {"'", '\''},
     {",", ','},
     {".", '.'},
@@ -107,7 +106,17 @@ const std::map<std::string, UINT> M_hotkeys =
     {"PAUSE", VK_PAUSE},
     {"PRINTSCREEN", VK_SNAPSHOT},
     {"LWIN", VK_LWIN},
-    {"RWIN", VK_RWIN}
+    {"RWIN", VK_RWIN},
+    {"NUM0", VK_NUMPAD0},
+    {"NUM1", VK_NUMPAD1},
+    {"NUM2", VK_NUMPAD2},
+    {"NUM3", VK_NUMPAD3},
+    {"NUM4", VK_NUMPAD4},
+    {"NUM5", VK_NUMPAD5},
+    {"NUM6", VK_NUMPAD6},
+    {"NUM7", VK_NUMPAD7},
+    {"NUM8", VK_NUMPAD8},
+    {"NUM9", VK_NUMPAD9}
 };
 
 struct action
