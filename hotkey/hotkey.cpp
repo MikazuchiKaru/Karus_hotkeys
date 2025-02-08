@@ -27,10 +27,6 @@ int hotkeycheck(std::vector<macro> macros)
                 exe(macros[i]);
             }
         }
-        if(msg.message == WM_HOTKEY && msg.wParam == 0)
-        {
-            return 0;
-        }
     }
     return 0;
 }

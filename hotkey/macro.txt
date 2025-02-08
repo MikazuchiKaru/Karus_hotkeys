@@ -1,7 +1,11 @@
-^/F1
-    execute, chrome.exe;
+F1
+    msgbox, hello world, greeting;
 
-^+/F2
-    execute, chrome.exe;
-    wait, 1000;
-    execute, chrome.exe;
+F2
+    click, left;
+
+F3
+    send, hello, world;
+
+^!/ESC
+    exit, 0;

@@ -22,6 +22,11 @@ std::vector<macro> parse(const std::string filepath)
                     {
                         modifiers.push_back(M_hotkeys.at(line.substr(i, 1)));
                     }
+                    else
+                    {
+                        MessageBoxA(NULL, "Invalid modifier", "Error", MB_OK);
+                        exit(1);
+                    }
                 }
                 line = line.substr(line.find('/')+1);
             }
@@ -32,6 +37,11 @@ std::vector<macro> parse(const std::string filepath)
                     macros[i].modifiers = modifiers;
                     modifiers.clear(); // Clear modifiers after assigning
                 }
+            }
+            else
+            {
+                MessageBoxA(NULL, "Invalid hotkey", "Error", MB_OK);
+                exit(1);
             }
         }
         else
