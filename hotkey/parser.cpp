@@ -51,6 +51,6 @@ std::vector<macro> parse(const std::string filepath)
             }
         }
     }
-    
+    file.close();
     return macros;
 }

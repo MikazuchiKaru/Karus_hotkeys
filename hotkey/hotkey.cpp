@@ -1,7 +1,6 @@
 #include "resources.h"
 #include "actions.cpp"
 
-
 int hotkeycheck(std::vector<macro> macros)
 {
     for(int i = 0; i < macros.size(); i++)
@@ -28,5 +27,13 @@ int hotkeycheck(std::vector<macro> macros)
             }
         }
     }
+
+    // Unregister all hotkeys before exiting
+    for(int i = 0; i < macros.size(); i++)
+    {
+        UnregisterHotKey(NULL, i+1);
+    }
+    UnregisterHotKey(NULL, 0);
+
     return 0;
 }
