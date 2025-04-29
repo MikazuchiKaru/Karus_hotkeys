@@ -4,7 +4,7 @@ Hello there, thank you for using my simple app. I hope it proves useful!
 
 
 here's a basic manual:
-First you have to download the exe file in the hotkey folder. Place it wherever inside an empty folder and create a text (.txt) file in the same place. In this file you can use a unique language created by your's truly. In the following text I will explain its syntax. (note: "{}" mean that in that place you write what you want based on the text inside)
+First you have to download the exe file in the hotkey folder. You can (and probably should) rename it. Place it wherever inside an empty folder and create a text (.txt) file in the same place. In this file you can use a unique language created by your's truly. In the following text I will explain its syntax. (note: "{}" mean that in that place you write what you want based on the text inside)
 
 For each macro you need a hotkey. You create those like this:
 {modifier1}{modifier2}/{key}
@@ -72,4 +72,5 @@ For each macro you need a hotkey. You create those like this:
 
 additional notes:
 Any lines without text and lines starting with '#' in the text file will be ignored (you can create notes for yourself with '#')
+It is advised (by me) to always add a hotkey to exit the code, or you can close it in the task manager when you search the name of your exe file
 Don't try to intentionally break the code by not following these instructions, I am under no obligation to prevent each intentional user caused problem (like putting semicolon in a messagebox text message), it causes issues only for you so there is no reason to do so
