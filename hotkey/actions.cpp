@@ -7,7 +7,7 @@ void exe(macro mymacro)
     {
         if(action.command == "exit")
         {
-            exit(action.attribute == "0" ? 0 : 1);
+            PostQuitMessage(action.attribute == "0" ? 0 : 1);
         }
         else if (action.command == "msgbox")
         {
@@ -55,7 +55,7 @@ void exe(macro mymacro)
             else
             {
                 MessageBoxA(NULL, "Invalid click type", "Error", MB_OK);
-                exit(1);
+                PostQuitMessage(1);;
             }
         }
         else if(action.command == "execute")
@@ -69,7 +69,7 @@ void exe(macro mymacro)
         else
         {
             MessageBoxA(NULL, "Invalid action", "Error", MB_OK);
-            exit(1);
+            PostQuitMessage(1);;
         }
     }
 }

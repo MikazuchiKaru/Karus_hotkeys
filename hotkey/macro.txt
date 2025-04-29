@@ -1,8 +1,11 @@
+^/B
+    msgbox, hi;
+
+^!/ESC
+    exit, 0;
+
 ^+/C
     execute, chrome.exe;
 
 ^/NUM1
     execute, https://www.crunchyroll.com/;
-
-^!/ESC
-    exit, 0;

@@ -1,6 +1,7 @@
 #pragma once
 #ifndef HEADER_H
 #define HEADER_H
+#define WM_MY_EXIT (WM_USER + 1)
 #include <map>
 #include <fstream>
 #include <iostream>
