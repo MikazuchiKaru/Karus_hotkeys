@@ -1,11 +1,8 @@
-^/B
-    msgbox, hi;
+#this is a comment
+^+/TAB
+    execute, chrome.exe;
+    wait, 1000;
+    msgbox, chrome opened, custom alert;
 
 ^!/ESC
     exit, 0;
-
-^+/C
-    execute, chrome.exe;
-
-^/NUM1
-    execute, https://www.crunchyroll.com/;
