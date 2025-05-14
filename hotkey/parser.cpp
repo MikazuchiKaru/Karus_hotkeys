@@ -7,17 +7,17 @@ std::vector<macro> parse(const std::string filepath)
     macro mymacro;
     std::ifstream file(filepath);
     std::string line;
-    int i = -1; // Initialize i to -1 to correctly index macros
+    int i = -1;   //index turns 0 with the first macro
 
     while (std::getline(file, line))
     {
         if (line.empty() || line[0] == '#') {
-            continue; // Skip empty lines or comments
+            continue;
         }
         if (line.find(';') == std::string::npos)
         {
             if(line.find('/') != std::string::npos) {
-                for(int i = 0; i < line.find('/'); i++) {
+                for(int i = 0; i < line.find('/'); i++) {   //for each modifier
                     if(M_hotkeys.find(line.substr(i, 1)) != M_hotkeys.end())
                     {
                         modifiers.push_back(M_hotkeys.at(line.substr(i, 1)));
@@ -30,12 +30,12 @@ std::vector<macro> parse(const std::string filepath)
                 }
                 line = line.substr(line.find('/')+1);
             }
-            if(M_hotkeys.find(line) != M_hotkeys.end()) {
-                macros.push_back({M_hotkeys.at(line)});
-                i++; // Increment i only when a new macro is added
+            if(M_hotkeys.find(line) != M_hotkeys.end()) {   //if it exists..
+                macros.push_back({M_hotkeys.at(line)});     //it pushes it back (creates new macro)
+                i++;
                 if (!modifiers.empty()) {
                     macros[i].modifiers = modifiers;
-                    modifiers.clear(); // Clear modifiers after assigning
+                    modifiers.clear();
                 }
             }
             else
@@ -46,8 +46,9 @@ std::vector<macro> parse(const std::string filepath)
         }
         else
         {
-            if (i >= 0) { // Ensure i is valid before accessing macros
-                macros[i].actions.push_back({ line.substr(4, line.find(',') - 4), line.substr(line.find(',') + 2, line.find(';') - 1 - line.find(",") - 1) });
+            if (i >= 0) {
+                macros[i].actions.push_back({ line.substr(4, line.find(',') - 4),
+                line.substr(line.find(',') + 2, line.find(';') - 1 - line.find(",") - 1) }); //starts at x+2 so ends at y-(x+2)
             }
         }
     }

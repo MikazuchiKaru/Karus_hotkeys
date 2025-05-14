@@ -72,5 +72,5 @@ For each macro you need a hotkey. You create those like this:
 
 additional notes:
 Any lines without text and lines starting with '#' in the text file will be ignored (you can create notes for yourself with '#')
-It is advised (by me) to always add a hotkey to exit the code, or you can close it in the task manager when you search the name of your exe file
+It is advised (by me) to always add a hotkey to exit the code, or you can close it in the task manager when you search the name of your exe file (it won't shut down properly though, could leave some hotkeys blocked, in that case just restart your pc and let the program shutdown properly next time)
 Don't try to intentionally break the code by not following these instructions, I am under no obligation to prevent each intentional user caused problem (like putting semicolon in a messagebox text message), it causes issues only for you so there is no reason to do so

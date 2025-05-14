@@ -7,16 +7,16 @@ int hotkeycheck(std::vector<macro> macros)
     {
         UINT combinedModifiers = 0;
         for (UINT modifier : macros[i].modifiers) {
-            combinedModifiers |= modifier;
+            combinedModifiers |= modifier;  //combines the modifiers into one
         }
 
-        if (!RegisterHotKey(NULL, i, combinedModifiers, macros[i].hotkey)) {
+        if (!RegisterHotKey(NULL, i, combinedModifiers, macros[i].hotkey)) {    //returns 0 if error occurs
             std::cerr << "Failed to register hotkey!" << i << std::endl;
             return 1;
         }
     }
     MSG msg;
-    while (GetMessage(&msg, NULL, 0, 0))
+    while (GetMessage(&msg, NULL, 0, 0))    //it checks for messages until it receives a quit message
     {
         for(int i = 0; i < macros.size(); i++)
         {   
@@ -26,12 +26,9 @@ int hotkeycheck(std::vector<macro> macros)
             }
         }
     }
-    // Unregister all hotkeys before exiting
     for(int i = 0; i < macros.size(); i++)
     {
-        UnregisterHotKey(NULL, i);
+        UnregisterHotKey(NULL, i);  //important for proper shutdown
     }
-    UnregisterHotKey(NULL, 0);
-
     return 0;
 }
