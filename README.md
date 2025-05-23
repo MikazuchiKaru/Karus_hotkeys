@@ -2,9 +2,12 @@
 
 Hello there, thank you for using my simple app. I hope it proves useful!
 
-
 here's a basic manual:
-First you have to download the exe file in the hotkey folder. You can (and probably should) rename it. Place it wherever inside an empty folder and create a text (.txt) file in the same place. In this file you can use a unique language created by your's truly. In the following text I will explain its syntax. (note: "{}" mean that in that place you write what you want based on the text inside)
+There are two ways to get the file:
+The first one requires you to have gitbash and cmake installed. First you need to clone the repository. You can do that with gitbash using the argument "git clone https://github.com/MikazuchiKaru/Karus_hotkeys.git". Next you create a build folder in which you open command line and type "cmake .." and then "cmake --build . --config release". In the release folder created you can see the .exe file. Once you have the file, place it wherever inside an empty folder and create a text file in the same place named "macro.txt". Further instructions on line 9.
+The other option needs you to just download the zip from releases. Find the newest one, download and unzip. Inside you will see the .exe file with a macro.txt file with example code. Further instructions on next line.
+In this file you can use a unique language created by your's truly. There's an example file in the main file of the project. In the following text I will explain its syntax. (note: "{}" mean that in that place you write what you want based on the text inside)
+
 
 For each macro you need a hotkey. You create those like this:
 {modifier1}{modifier2}/{key}
@@ -73,4 +76,4 @@ For each macro you need a hotkey. You create those like this:
 additional notes:
 Any lines without text and lines starting with '#' in the text file will be ignored (you can create notes for yourself with '#')
 It is advised (by me) to always add a hotkey to exit the code, or you can close it in the task manager when you search the name of your exe file (it won't shut down properly though, could leave some hotkeys blocked, in that case just restart your pc and let the program shutdown properly next time)
-Don't try to intentionally break the code by not following these instructions, I am under no obligation to prevent each intentional user caused problem (like putting semicolon in a messagebox text message), it causes issues only for you so there is no reason to do so
+Don't try to intentionally break or test the limits of this code, I am under no obligation to prevent each intentional user caused problem (like putting semicolon in a messagebox text message, or placing two text files inside the folder), it causes issues only for you so there is no reason to do so

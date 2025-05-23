@@ -1,8 +1,0 @@
-#this is a comment
-^+/TAB
-    execute, chrome.exe;
-    wait, 1000;
-    msgbox, chrome opened, custom alert;
-
-^!/ESC
-    exit, 0;
