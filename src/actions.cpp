@@ -26,6 +26,16 @@ void exe(macro mymacro)
                 SendInput(1, &input, sizeof(INPUT));
             }
         }
+        else if(action.command == "media" && M_media.find(action.attribute) != M_media.end())
+        {
+            INPUT input;
+            input.type = INPUT_KEYBOARD;
+            input.ki.wVk = M_media.at(action.attribute);
+            input.ki.dwFlags = 0;
+            SendInput(1, &input, sizeof(INPUT));
+            input.ki.dwFlags = KEYEVENTF_KEYUP;
+            SendInput(1, &input, sizeof(INPUT));
+        }
         else if(action.command == "click")
         {
             INPUT input;

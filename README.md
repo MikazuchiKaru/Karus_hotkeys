@@ -63,6 +63,26 @@ For each macro you need a hotkey. You create those like this:
     click, {left/right/middle} = clicks based on what you entered
     execute, {.exe file/HTML} = opens an app or a web page
     wait, {milliseconds} = macro will wait the set amount of milliseconds (1 second = 1000 milliseconds)
+    media, {media action} = executes a media function, all the actions listed below
+    --> media actions
+      media next track = media next track
+      media prev track = media prev track
+      media stop = media stop
+      media play pause = media play pause
+      volume mute = volume mute
+      volume down = volume down
+      volume up = volume up
+      browser back = browser back
+      browser forward = browser forward
+      browser refresh = browser refresh
+      browser stop = browser stop
+      browser search = browser search
+      browser favorites = browser favorites
+      browser home = browser home
+      launch mail = launch mail
+      launch media select = launch media select
+      launch app1 = launch app1
+      launch app2 = launch app2
   
   you can enter multiple commands in a row
   

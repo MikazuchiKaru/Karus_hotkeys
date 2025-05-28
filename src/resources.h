@@ -120,6 +120,34 @@ const std::map<std::string, UINT> M_hotkeys =
     {"NUM9", VK_NUMPAD9}
 };
 
+const std::map<std::string, UINT> M_media = {
+    // Media control keys
+    {"media next track", VK_MEDIA_NEXT_TRACK},
+    {"media prev track", VK_MEDIA_PREV_TRACK},
+    {"media stop", VK_MEDIA_STOP},
+    {"media play pause", VK_MEDIA_PLAY_PAUSE},
+
+    // Volume control keys
+    {"volume mute", VK_VOLUME_MUTE},
+    {"volume down", VK_VOLUME_DOWN},
+    {"volume up", VK_VOLUME_UP},
+
+    // Browser keys (sometimes grouped with media keys)
+    {"browser back", VK_BROWSER_BACK},
+    {"browser forward", VK_BROWSER_FORWARD},
+    {"browser refresh", VK_BROWSER_REFRESH},
+    {"browser stop", VK_BROWSER_STOP},
+    {"browser search", VK_BROWSER_SEARCH},
+    {"browser favorites", VK_BROWSER_FAVORITES},
+    {"browser home", VK_BROWSER_HOME},
+
+    // Launch keys
+    {"launch mail", VK_LAUNCH_MAIL},
+    {"launch media select", VK_LAUNCH_MEDIA_SELECT},
+    {"launch app1", VK_LAUNCH_APP1},
+    {"launch app2", VK_LAUNCH_APP2}
+};
+
 struct action
 {
     std::string command;
